@@ -5,7 +5,6 @@
 	--color-yeloow: #fcfe67;
 	--color-orange: #f38c52;
 	--color-blue: #1347ff;
-	--index: calc(1vw + 1vh);
 	--ease: cubic-bezier(0.3, -0.49, 0.1, 1.71);
 }
 /* block navigation */
@@ -15,12 +14,12 @@
 	bottom: -200px;
 	width: 100%;
 	bottom: 0;
-	height: 11vh;
-	min-height: 90px;
+	height: 10vh;
+	min-height: 80px;
 	opacity: 0;
 	display: flex;
 	justify-content: center;
-	padding: 0 18px;
+	padding: 0 24px;
 	padding-bottom: 18px;
 	animation: navStart 0.7s ease forwards;
 	will-change: auto;
@@ -40,7 +39,7 @@
 .contBlockBack {
 	height: 100%;
 	width: 100%;
-	max-width: 400px;
+	max-width: 340px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -55,7 +54,7 @@
 	height: 100%;
 	width: 100%;
 	background: rgba(50, 50, 50, 0.5);
-	backdrop-filter: blur(24px);
+	backdrop-filter: blur(12px);
 	position: relative;
 	z-index: 2;
 	transition: 1s ease;
@@ -63,7 +62,7 @@
 }
 /* navigation effect hover */
 .navBlock:hover {
-	backdrop-filter: blur(18px);
+	backdrop-filter: blur(8px);
 }
 /* item navigation */
 .navItem {
@@ -129,5 +128,26 @@
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@media (max-width: 480px) {
+	.navItem {
+		font-size: 1em;
+	}
+	.nav {
+		height: 9vh;
+		min-height: 70px;
+		padding: 0 18px;
+		padding-bottom: 14px;
+	}
+	.contBlockBack {
+		height: 100%;
+		width: 80%;
+		max-width: 340px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
 	}
 }

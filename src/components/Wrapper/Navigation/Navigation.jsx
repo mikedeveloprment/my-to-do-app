@@ -12,8 +12,8 @@ const Navigation = () => {
 					<span
 						className={clas.BlockBlack}
 						style={{
-							width: `${100 / arrayPages.length - 10}%`,
-							left: `${pageIndex * (100 / arrayPages.length) + 5}%`,
+							width: `${100 / arrayPages.length - 8}%`,
+							left: `${pageIndex * (100 / arrayPages.length) + 4}%`,
 						}}
 					></span>
 					<ul className={clas.navBlock}>
@@ -32,8 +32,8 @@ const Navigation = () => {
 						))}
 						<span
 							style={{
-								width: `${100 / arrayPages.length - 10}%`,
-								left: `${pageIndex * (100 / arrayPages.length) + 5}%`,
+								width: `${100 / arrayPages.length - 8}%`,
+								left: `${pageIndex * (100 / arrayPages.length) + 4}%`,
 							}}
 							className={clas.activeBlock}
 						></span>
