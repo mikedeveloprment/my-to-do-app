@@ -12,8 +12,8 @@
 .nav {
 	position: absolute;
 	left: 0;
-	bottom: -200px;
 	width: 100%;
+	bottom: 0;
 	height: 11vh;
 	min-height: 90px;
 	opacity: 0;
@@ -28,11 +28,9 @@
 @keyframes navStart {
 	0% {
 		opacity: 0;
-		bottom: -200px;
 	}
 	100% {
 		opacity: 1;
-		bottom: 0;
 	}
 }
 /* container to blur block */
