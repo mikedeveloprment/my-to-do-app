@@ -1,0 +1,16 @@
+/* vars */
+:root {
+	--color-black: #1c1c1c;
+	--color-gray: #323232;
+	--color-yeloow: #fcfe67;
+	--color-orange: #f38c52;
+	--color-blue: #1347ff;
+	--index: calc(1vw + 1vh);
+	--ease: cubic-bezier(0.5, -0.49, 0.51, 1.51);
+}
+/* wrapper */
+.wrapper {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+}

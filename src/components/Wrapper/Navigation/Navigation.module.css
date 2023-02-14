@@ -1,0 +1,130 @@
+/* vars */
+:root {
+	--color-black: #1c1c1c;
+	--color-gray: #323232;
+	--color-yeloow: #fcfe67;
+	--color-orange: #f38c52;
+	--color-blue: #1347ff;
+	--index: calc(1vw + 1vh);
+	--ease: cubic-bezier(0.3, -0.49, 0.1, 1.71);
+}
+/* block navigation */
+.nav {
+	position: absolute;
+	left: 0;
+	bottom: -200px;
+	width: 100%;
+	height: 100px;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 18px;
+	animation: navStart 0.7s ease forwards;
+	will-change: auto;
+}
+/* keyframes */
+@keyframes navStart {
+	0% {
+		opacity: 0;
+		bottom: -200px;
+	}
+	100% {
+		opacity: 1;
+		bottom: 0;
+	}
+}
+/* container to blur block */
+.contBlockBack {
+	height: 100%;
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+/* navigation */
+.navBlock {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	height: 100%;
+	width: 100%;
+	background: rgba(50, 50, 50, 0.5);
+	backdrop-filter: blur(24px);
+	position: relative;
+	z-index: 2;
+	transition: 1s ease;
+	will-change: backdrop-filter;
+}
+/* navigation effect hover */
+.navBlock:hover {
+	backdrop-filter: blur(18px);
+}
+/* item navigation */
+.navItem {
+	cursor: pointer;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 120%;
+	font-weight: 800;
+	position: relative;
+	z-index: 4;
+	opacity: 0;
+	transform: translateY(-100%) scale(0);
+	color: var(--color-black);
+	animation: itemState 0.4s ease forwards;
+	transition: color 0.4s ease;
+}
+/* keyframes */
+@keyframes itemState {
+	0% {
+		opacity: 0;
+		transform: translateY(100%) scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%) scale(1);
+	}
+}
+/* block active item */
+.activeBlock {
+	position: absolute;
+	height: 72%;
+	border-radius: 14px;
+	background: #fff;
+	z-index: 3;
+	transition: left 0.7s ease;
+	opacity: 0;
+	transform: scale(0);
+	animation: blockStart 0.4s ease 0.4s forwards;
+	will-change: auto;
+}
+/* blur block */
+.BlockBlack {
+	position: absolute;
+	z-index: -1;
+	background: #fff;
+	height: 60%;
+	transition: left 0.7s 0.1s ease;
+	border-radius: 14px;
+	opacity: 0;
+	transform: scale(0);
+	animation: blockStart 0.4s 0.6s ease forwards;
+	will-change: auto;
+}
+/* keyframes */
+@keyframes blockStart {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
