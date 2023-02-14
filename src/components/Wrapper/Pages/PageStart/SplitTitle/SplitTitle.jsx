@@ -2,12 +2,11 @@ import React from "react";
 import clas from "./SplitTitle.module.css";
 
 const SplitTitle = () => {
-	const textSplit = "Create Tasks-Card";
+	const textSplit = "Create Tasks-Cards";
 	const textSplitArray = textSplit.split("");
-	console.log(textSplitArray);
 	return (
 		<div className={clas.header}>
-			<p className={clas.splitText}>
+			<h1 className={clas.splitText}>
 				{textSplitArray.map((letter, index) =>
 					letter === " " ? (
 						<span
@@ -20,7 +19,7 @@ const SplitTitle = () => {
 							&nbsp;
 						</span>
 					) : letter === "-" ? (
-						<br />
+						<br key={index} />
 					) : (
 						<span
 							className={clas.splitLetter}
@@ -33,7 +32,7 @@ const SplitTitle = () => {
 						</span>
 					)
 				)}
-			</p>
+			</h1>
 		</div>
 	);
 };

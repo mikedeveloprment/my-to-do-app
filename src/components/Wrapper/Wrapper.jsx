@@ -1,12 +1,13 @@
 import React from "react";
 import Navigation from "./Navigation/Navigation";
-import SplitTitle from "./SplitTitle/SplitTitle";
+import PageStart from "./Pages/PageStart/PageStart";
+import SplitTitle from "./Pages/PageStart/SplitTitle/SplitTitle";
 import clas from "./Wrapper.module.css";
 
 const Wrapper = () => {
 	return (
 		<div className={clas.wrapper}>
-			<SplitTitle />
+			<PageStart />
 			<Navigation />
 		</div>
 	);
