@@ -1,0 +1,48 @@
+/* vars */
+:root {
+	--index: calc(1vw + 1vh);
+	--color-black: #1c1c1c;
+	--color-gray: #323232;
+	--color-yeloow: #fcfe67;
+	--color-orange: #f38c52;
+	--color-blue: #1347ff;
+	--ease: cubic-bezier(0.5, -0.49, 0.51, 1.51);
+}
+/* header */
+.header {
+	margin: calc(calc(1vh + 1vw) * 1) 0;
+}
+/* text split  */
+.splitText {
+	font-size: calc(calc(1vh + 1vw) * 2.5);
+	font-weight: 700;
+	text-align: center;
+	line-height: 115%;
+}
+.splitLetter {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(-100%) rotate(-5deg) translateX(20%);
+	animation: splitLetterStart 0.5s ease forwards;
+}
+/* keyfaremes */
+@keyframes splitLetterStart {
+	100% {
+		opacity: 1;
+		transform: translateY(0%) rotate(0deg) translateX(0px);
+	}
+}
+/* media request  */
+@media (max-width: 1000px) {
+	.splitText {
+		font-size: calc(calc(1vh + 1vw) * 3);
+	}
+}
+/* media request  */
+@media (max-width: 600px) {
+	.splitText {
+		font-size: calc(calc(1vh + 1vw) * 3.5);
+		font-weight: 700;
+		width: 100%;
+	}
+}

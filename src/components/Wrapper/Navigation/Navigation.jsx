@@ -24,7 +24,7 @@ const Navigation = () => {
 								className={clas.navItem}
 								style={{
 									color: pageIndex == index ? "#1c1c1c" : "#fff",
-									animationDelay: `${index * 0.1 + 0.4}s`,
+									animationDelay: `${index * 0.1 + 0.5}s`,
 								}}
 							>
 								{page}
