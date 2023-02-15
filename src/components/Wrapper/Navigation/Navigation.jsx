@@ -68,8 +68,8 @@ const Navigation = () => {
 							whileDrag={{ scale: 0.9 }}
 							dragMomentum={false}
 							dragConstraints={constraintsRef}
-							dragSnapToOrigin={stateClasContMotion}
-							dragPropagation={false}
+							dragSnapToOrigin={true}
+							dragPropagation={true}
 							dragTransition={{ bounceStiffness: 220, bounceDamping: 20 }}
 							onDragEnd={() => setStateClasContMotion(false)}
 						>
