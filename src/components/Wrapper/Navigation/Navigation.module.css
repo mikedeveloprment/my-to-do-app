@@ -187,17 +187,19 @@
 	height: 100%;
 	background: rgba(50, 50, 50, 0.5);
 	backdrop-filter: blur(28px);
-	transition: 1s 0.9s ease;
+	transition: 0.8s 0s ease;
 	will-change: auto;
 }
 
 .cartFooterActive2 {
 	border-radius: 50px;
+	transition: 0.8s 0.9s ease;
+
 	padding: 6px;
 }
 .cartFooterActive {
 	border-radius: 50px;
-	transition: 0.4s ease;
+	transition: 0.8s 0.9s ease;
 	aspect-ratio: 1;
 }
 .cartFooterBlock {

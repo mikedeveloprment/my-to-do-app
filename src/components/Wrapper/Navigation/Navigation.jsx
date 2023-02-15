@@ -70,6 +70,7 @@ const Navigation = () => {
 							dragConstraints={constraintsRef}
 							dragSnapToOrigin={true}
 							dragPropagation={true}
+							dragListener={stateClasContMotion}
 							dragTransition={{ bounceStiffness: 220, bounceDamping: 20 }}
 							onDragEnd={() => setStateClasContMotion(false)}
 						>
