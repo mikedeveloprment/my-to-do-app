@@ -1,7 +1,7 @@
 import React from "react";
 import clas from "./Cart.module.css";
 import { useDispatch } from "react-redux";
-import { changeFooterState } from "../../../../../Redux/Slices/footerSlice";
+import { changeFooterState } from "../../../../../redux/Slices/footerSlice";
 
 const Cart = () => {
 	const dispatch = useDispatch();
