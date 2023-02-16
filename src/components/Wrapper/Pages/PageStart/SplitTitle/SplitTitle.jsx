@@ -24,7 +24,7 @@ const SplitTitle = () => {
 						<span
 							className={clas.splitLetter}
 							style={{
-								animationDelay: `${index * 0.04 + 0.2}s`,
+								animationDelay: `${index * 0.04 + 0.6}s`,
 							}}
 							key={index}
 						>

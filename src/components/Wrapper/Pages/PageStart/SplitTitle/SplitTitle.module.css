@@ -10,8 +10,8 @@
 }
 /* header */
 .header {
-	margin-top: 42px;
-	margin-bottom: 54px;
+	margin-top: 50px;
+	margin-bottom: 52px;
 }
 /* text split  */
 .splitText {
@@ -50,6 +50,13 @@
 	}
 }
 /* media request  */
+@media (max-height: 640px) {
+	.header {
+		margin-top: 30px;
+		margin-bottom: 32px;
+	}
+}
+/* media request  */
 @media (max-width: 800px) {
 	.splitText {
 		font-size: calc(calc(1vh + 1vw) * 3.25);
@@ -58,7 +65,7 @@
 /* media request  */
 @media (max-width: 600px) {
 	.splitText {
-		font-size: calc(calc(1vh + 1vw) * 3.5);
+		font-size: calc(calc(1vh + 1vw) * 3.3);
 		font-weight: 700;
 		width: 100%;
 	}

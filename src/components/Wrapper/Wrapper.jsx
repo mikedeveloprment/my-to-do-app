@@ -9,9 +9,7 @@ const Wrapper = () => {
 	const isPresent = useIsPresent();
 	return (
 		<div className={clas.wrapper}>
-			<div id="detail">
-				<Outlet />
-			</div>
+			<Outlet />
 			<motion.div
 				initial={{ scaleY: 1 }}
 				animate={{
