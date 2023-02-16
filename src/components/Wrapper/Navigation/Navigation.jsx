@@ -46,7 +46,6 @@ const Navigation = () => {
 						style={{
 							color: pageIndex == index ? "#1c1c1c" : "#fff",
 							animationDelay: `${index * 0.1 + 0.5}s`,
-							transitionDelay: `${index * 0.1 + 0.5}s`,
 						}}
 					>
 						<Link
