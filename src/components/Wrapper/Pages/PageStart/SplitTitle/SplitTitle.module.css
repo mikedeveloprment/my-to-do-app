@@ -17,6 +17,7 @@
 .splitText {
 	font-size: calc(calc(1vh + 1vw) * 2.5);
 	font-weight: 700;
+	text-align: center;
 	line-height: 115%;
 }
 .splitLetter {
@@ -59,6 +60,5 @@
 		font-size: calc(calc(1vh + 1vw) * 3.5);
 		font-weight: 700;
 		width: 100%;
-		text-align: center;
 	}
 }

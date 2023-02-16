@@ -8,7 +8,7 @@ const Cart = () => {
 	const [scaleState, setScaleState] = React.useState(true);
 	const clickToArticle = () => {
 		dispatch(changeFooterState());
-		setScaleState(!scaleState);
+		setScaleState(false);
 	};
 	return (
 		<article

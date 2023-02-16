@@ -3,14 +3,27 @@ import clas from "./Navigation.module.css";
 import arrow from "../../../assets//icons8-redo-100.png";
 import done from "../../../assets//icons8-done-100 (1).png";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import {
+	changeFooterState,
+	changePageIndex,
+} from "../../../redux/Slices/footerSlice";
 
 const Navigation = () => {
-	const [pageIndex, setPageIndex] = React.useState(0);
+	const pageIndex = useSelector(state => state.counter.pageIndex);
+	const dispatch = useDispatch();
 	const arrayPages = ["Home", "Tasks"];
 	const constraintsRef = React.useRef(null);
 	const [stateClasContMotion, setStateClasContMotion] = React.useState(true);
 	const footerState = useSelector(state => state.counter.footerState);
+	const navigate = useNavigate();
+	const linkToCreatePage = () => {
+		setStateClasContMotion(false);
+		navigate("/1step");
+		dispatch(changeFooterState(true));
+		dispatch(changePageIndex(-8));
+	};
 	return (
 		<div>
 			<nav className={clas.nav}>
@@ -29,7 +42,7 @@ const Navigation = () => {
 						{arrayPages.map((page, index) => (
 							<li
 								key={index}
-								onClick={() => setPageIndex(index)}
+								onClick={() => dispatch(changePageIndex(index))}
 								className={clas.navItem}
 								style={{
 									color: pageIndex == index ? "#1c1c1c" : "#fff",
@@ -37,7 +50,9 @@ const Navigation = () => {
 									transitionDelay: `${index * 0.1 + 0.5}s`,
 								}}
 							>
-								{page}
+								<Link to={`/${page.toLowerCase()}`} className={clas.Link}>
+									{page}
+								</Link>
 							</li>
 						))}
 						<span
@@ -72,7 +87,7 @@ const Navigation = () => {
 							dragPropagation={true}
 							dragListener={stateClasContMotion}
 							dragTransition={{ bounceStiffness: 220, bounceDamping: 20 }}
-							onDragEnd={() => setStateClasContMotion(false)}
+							onDragEnd={linkToCreatePage}
 						>
 							<img
 								className={
