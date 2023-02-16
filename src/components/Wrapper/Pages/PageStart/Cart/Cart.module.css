@@ -11,10 +11,10 @@
 
 .cart {
 	overflow: visible;
-	height: 45vh;
+	height: 38vh;
 	width: 92%;
-	min-height: 300px;
-	max-width: 580px;
+	min-height: 200px;
+	max-width: 480px;
 	border-radius: 32px;
 	display: flex;
 	flex-direction: column;
@@ -39,19 +39,19 @@
 	}
 }
 .cartActive {
-	top: -10px;
+	top: 20px;
 }
 .cartHeader {
 	color: var(--color-black);
 	font-weight: 800;
-	font-size: 28px;
+	font-size: 22px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	width: 100%;
 	background: #fff;
 	border-radius: 32px 32px 0 0;
-	padding: 18px 26px;
+	padding: 14px 20px;
 }
 .cartMain {
 	background: var(--color-orange);
@@ -64,6 +64,6 @@
 @media (max-width: 600px) {
 	.cartHeader {
 		padding: 16px 22px;
-		font-size: 26px;
+		font-size: 22px;
 	}
 }

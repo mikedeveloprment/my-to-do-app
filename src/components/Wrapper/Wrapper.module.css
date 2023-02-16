@@ -27,7 +27,6 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: var(--color-yeloow);
-
+	background: var(--color-gray);
 	z-index: 20;
 }
