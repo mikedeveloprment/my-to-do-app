@@ -25,6 +25,7 @@
 	opacity: 0;
 	transform: translateY(-100%) rotate(-5deg) translateX(20%);
 	animation: splitLetterStart 0.5s ease forwards;
+	will-change: transform;
 }
 /* keyfaremes */
 @keyframes splitLetterStart {

@@ -26,6 +26,7 @@
 	margin: 0 auto;
 	top: 0;
 	animation: cart 0.6s 0.4s ease forwards;
+	will-change: auto;
 }
 @keyframes cart {
 	0% {

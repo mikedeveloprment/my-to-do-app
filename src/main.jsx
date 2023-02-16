@@ -18,10 +18,6 @@ export default function App() {
 			element: <Wrapper />,
 			children: [
 				{
-					path: "/home",
-					element: <PageStart />,
-				},
-				{
 					path: "/",
 					element: <PageStart />,
 				},

@@ -21,9 +21,11 @@ const Navigation = () => {
 	const linkToCreatePage = () => {
 		setStateClasContMotion(false);
 		navigate("/1step");
-		dispatch(changeFooterState(true));
 		dispatch(changePageIndex(-8));
 	};
+	React.useEffect(() => {
+		dispatch(changeFooterState(true));
+	}, []);
 	return (
 		<div>
 			<nav className={clas.nav}>
@@ -50,7 +52,12 @@ const Navigation = () => {
 									transitionDelay: `${index * 0.1 + 0.5}s`,
 								}}
 							>
-								<Link to={`/${page.toLowerCase()}`} className={clas.Link}>
+								<Link
+									to={`/${
+										page.toLowerCase() == "home" ? "" : page.toLowerCase()
+									}`}
+									className={clas.Link}
+								>
 									{page}
 								</Link>
 							</li>
