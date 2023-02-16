@@ -22,7 +22,7 @@ const Wrapper = () => {
 				}}
 				exit={{
 					scaleY: 1,
-					transition: { duration: 1.3, ease: "easeInOut", delay: 0.7 },
+					transition: { duration: 1, ease: "easeInOut", delay: 1.35 },
 				}}
 				style={{ originY: isPresent ? 0 : 1 }}
 				className={clas.block}
