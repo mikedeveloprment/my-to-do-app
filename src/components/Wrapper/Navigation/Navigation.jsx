@@ -21,7 +21,7 @@ const Navigation = () => {
 	const linkToCreatePage = () => {
 		setStateClasContMotion(false);
 		navigate("/1step");
-		dispatch(changePageIndex(-8));
+		dispatch(changePageIndex(-6));
 	};
 	React.useEffect(() => {
 		dispatch(changeFooterState(true));

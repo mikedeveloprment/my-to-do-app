@@ -51,7 +51,7 @@
 	width: 100%;
 	background: #fff;
 	border-radius: 32px 32px 0 0;
-	padding: 14px 20px;
+	padding: 16px 22px;
 }
 .cartMain {
 	background: var(--color-orange);
@@ -63,7 +63,6 @@
 /* media request  */
 @media (max-width: 600px) {
 	.cartHeader {
-		padding: 16px 22px;
 		font-size: 22px;
 	}
 }

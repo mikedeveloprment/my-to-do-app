@@ -4,7 +4,6 @@ import Navigation from "./Navigation/Navigation";
 import { motion } from "framer-motion";
 import clas from "./Wrapper.module.css";
 import { Outlet } from "react-router-dom";
-import img from "../../assets/icons8-done-100 (1).png";
 
 const Wrapper = () => {
 	const isPresent = useIsPresent();
@@ -22,7 +21,7 @@ const Wrapper = () => {
 				}}
 				exit={{
 					scaleY: 1,
-					transition: { duration: 1, ease: "easeInOut", delay: 1.35 },
+					transition: { duration: 0.8, ease: "easeInOut", delay: 1.3 },
 				}}
 				style={{ originY: isPresent ? 0 : 1 }}
 				className={clas.block}
