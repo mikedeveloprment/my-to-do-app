@@ -21,9 +21,9 @@ const Wrapper = () => {
 				}}
 				exit={{
 					scaleY: 1,
-					transition: { duration: 0.8, ease: "easeInOut", delay: 1.3 },
+					transition: { duration: 1, ease: "easeInOut", delay: 0.6 },
 				}}
-				style={{ originY: isPresent ? 0 : 1 }}
+				style={{ originY: isPresent ? 1 : 0 }}
 				className={clas.block}
 			></motion.div>
 			<Navigation />

@@ -10,15 +10,15 @@
 }
 /* header */
 .header {
-	margin-top: 40px;
-	margin-bottom: 38px;
+	margin-top: 28px;
+	margin-bottom: 24px;
 }
 /* text split  */
 .splitText {
 	font-size: calc(calc(1vh + 1vw) * 2);
 	font-weight: 700;
 	text-align: center;
-	line-height: 115%;
+	line-height: 100%;
 }
 .splitLetter {
 	display: inline-block;
@@ -64,7 +64,6 @@
 /* media request  */
 @media (max-width: 600px) {
 	.splitText {
-		font-size: calc(calc(1vh + 1vw) * 3.5);
 		font-weight: 700;
 		width: 100%;
 	}

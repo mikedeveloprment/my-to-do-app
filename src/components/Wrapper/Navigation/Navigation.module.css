@@ -16,7 +16,6 @@
 	height: 100%;
 	width: 100%;
 	position: absolute;
-
 	transition: 1s ease;
 }
 .navBlockActive {
@@ -44,8 +43,8 @@
 	opacity: 0;
 	transform: translateY(-100%) scale(0);
 	color: var(--color-black);
-	animation: itemState 0.4s ease forwards;
-	transition: 0.4s 0s ease;
+	animation: itemState 0.3s ease forwards;
+	transition: 1s 0s ease;
 }
 .Link {
 	width: 100%;
@@ -69,10 +68,10 @@
 	position: relative;
 	z-index: 4;
 	opacity: 1;
-	animation: itemState2 0.4s 0s ease forwards;
+	animation: itemState2 0.3s 0s ease forwards;
 	transform: translateY(0%) scale(1);
 	color: var(--color-black);
-	transition: 0.4s 0s ease;
+	transition: 1s 0s ease;
 }
 /* keyframes */
 @keyframes itemState {
@@ -98,11 +97,12 @@
 /* block active item */
 .navBlock .activeBlock {
 	position: absolute;
-	height: 72%;
-	border-radius: 14px;
+	height: calc(100% - 20%);
+	border-radius: 20px;
 	background: #fff;
 	z-index: 3;
-	transition: left 1s ease;
+	width: calc(50% - 5%);
+	transition: 0.6s ease;
 	opacity: 0;
 	transform: scale(0);
 	animation: blockStart 0.4s ease 0.5s forwards;
@@ -110,14 +110,15 @@
 }
 .navBlockActive .activeBlock {
 	position: absolute;
-	height: 72%;
-	border-radius: 14px;
+	height: calc(100% - 20%);
+	border-radius: 20px;
 	background: #fff;
 	z-index: 3;
-	transition: left 1s ease;
+	width: calc(50% - 5%);
+	transition: 0.6s ease;
 	opacity: 1;
 	transform: scale(1);
-	animation: blockStart2 0.4s ease 0.7s forwards;
+	animation: blockStart2 0.4s ease 0.2s forwards;
 	will-change: auto;
 }
 /* keyframes */
@@ -147,7 +148,7 @@
 	height: 9vh;
 	aspect-ratio: 4.5/1;
 	background: rgba(50, 50, 50, 0.5);
-	backdrop-filter: blur(28px);
+	backdrop-filter: blur(10px);
 	position: fixed;
 	transition: 0.8s 0s ease;
 	will-change: auto;
@@ -171,12 +172,12 @@
 }
 .cartFooterActive2 {
 	border-radius: 50px;
-	transition: 0.8s 0.9s ease;
+	transition: 0.8s 0.4s ease;
 	padding: 6px;
 }
 .cartFooterActive {
 	border-radius: 50px;
-	transition: 0.8s 0.9s ease;
+	transition: 0.8s 0.4s ease;
 	aspect-ratio: 1;
 }
 /* media request mobile */
@@ -191,7 +192,6 @@
 	}
 	.cartFooterActive {
 		border-radius: 50px;
-		transition: 0.8s 0.9s ease;
 		aspect-ratio: 1;
 	}
 	.contBlockBack {
@@ -230,13 +230,13 @@
 	}
 }
 .buttonCartActive {
-	animation: buttonCart 0.6s 1.2s forwards ease;
+	animation: buttonCart 0.6s 0.7s forwards ease;
 }
 .arrow {
 	width: 35%;
 	position: absolute;
 	pointer-events: none;
-	transition: 0.4s 0.4s ease;
+	transition: 0.4s 0s ease;
 	opacity: 1;
 	transform: scale(1) translateY(0%);
 }

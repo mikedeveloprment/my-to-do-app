@@ -1,8 +1,8 @@
 import React from "react";
 import clas from "./SplitTitle.module.css";
 
-const SplitTitle = () => {
-	const textSplit = "Create Tasks-Cards";
+const SplitTitle = ({ text = "don't title" }) => {
+	const textSplit = `${text}`;
 	const textSplitArray = textSplit.split("");
 	return (
 		<div className={clas.header}>

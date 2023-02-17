@@ -45,7 +45,9 @@ const Navigation = () => {
 						className={clas.navItem}
 						style={{
 							color: pageIndex == index ? "#1c1c1c" : "#fff",
-							animationDelay: `${index * 0.1 + 0.5}s`,
+							animationDelay: `${
+								footerState ? index * 0.1 + 0.5 : index * 0.1
+							}s`,
 						}}
 					>
 						<Link
@@ -58,8 +60,7 @@ const Navigation = () => {
 				))}
 				<span
 					style={{
-						width: `${100 / arrayPages.length - 8}%`,
-						left: `${pageIndex * (100 / arrayPages.length) + 4}%`,
+						left: `${pageIndex * 50 + 2.5}% `,
 					}}
 					className={clas.activeBlock}
 				></span>
