@@ -1,13 +1,19 @@
 import React from "react";
 import clas from "./Cart.module.css";
 import { useDispatch } from "react-redux";
-import { changeFooterState } from "../../../../../redux/Slices/footerSlice";
+import {
+	changeFooterState,
+	setNavigateFooter,
+	changePageIndex,
+} from "../../../../../redux/Slices/footerSlice";
 
 const Cart = () => {
 	const dispatch = useDispatch();
 	const [scaleState, setScaleState] = React.useState(true);
 	const clickToArticle = () => {
-		dispatch(changeFooterState());
+		dispatch(setNavigateFooter(1));
+		dispatch(changeFooterState(false));
+		dispatch(changePageIndex(-6));
 		setScaleState(false);
 	};
 	return (

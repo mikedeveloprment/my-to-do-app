@@ -121,6 +121,7 @@
 	animation: blockStart2 0.4s ease 0.2s forwards;
 	will-change: auto;
 }
+
 /* keyframes */
 @keyframes blockStart2 {
 	100% {
@@ -173,7 +174,7 @@
 .cartFooterActive2 {
 	border-radius: 50px;
 	transition: 0.8s 0.4s ease;
-	padding: 6px;
+	padding: 5px;
 }
 .cartFooterActive {
 	border-radius: 50px;

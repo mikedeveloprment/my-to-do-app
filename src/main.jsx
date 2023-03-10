@@ -10,6 +10,7 @@ import { store } from "./redux/store";
 import CreateCart1Step from "./components/Wrapper/Pages/CreateCart1Step/CreateCart1Step";
 import PageStart from "./components/Wrapper/Pages/PageStart/PageStart";
 import Tasks from "./components/Wrapper/Pages/Tasks/Tasks";
+import CreateCart2Step from "./components/Wrapper/Pages/CreateCart2Step/CreateCart2Step";
 
 export default function App() {
 	const element = useRoutes([
@@ -24,6 +25,10 @@ export default function App() {
 				{
 					path: "/1step",
 					element: <CreateCart1Step />,
+				},
+				{
+					path: "/2step",
+					element: <CreateCart2Step />,
 				},
 				{
 					path: "/tasks",

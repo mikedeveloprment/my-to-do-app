@@ -1,5 +1,11 @@
 import React from "react";
 import clas from "./BlockSelectBG.module.css";
+import {
+	changeFooterState,
+	setNavigateFooter,
+} from "../../../../../redux/Slices/footerSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { colorSelect } from "../../../../../redux/Slices/cartSlice";
 
 const BlockSelectBG = () => {
 	const arrayBackgrounds = [
@@ -10,7 +16,13 @@ const BlockSelectBG = () => {
 		"63B0c9",
 		"646aff",
 	];
-	const [backgroundCard, setBackgroundCard] = React.useState("323232");
+	const dispatch = useDispatch();
+	const backgroundCard = useSelector(state => state.input.colorS);
+	const clickToBackground = item => {
+		dispatch(changeFooterState(false));
+		dispatch(colorSelect(item));
+		dispatch(setNavigateFooter(2));
+	};
 
 	return (
 		<div className={clas.selectBg}>
@@ -36,7 +48,7 @@ const BlockSelectBG = () => {
 							background: `#${item}`,
 							animationDelay: `${index * 0.15 + 0.75}s`,
 						}}
-						onClick={() => setBackgroundCard(item)}
+						onClick={() => clickToBackground(item)}
 					></li>
 				))}
 			</ul>

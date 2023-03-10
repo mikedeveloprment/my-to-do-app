@@ -9,19 +9,30 @@ import {
 	changeFooterState,
 	changePageIndex,
 } from "../../../redux/Slices/footerSlice";
+import { pushTask, setInput } from "../../../redux/Slices/cartSlice";
 
 const Navigation = () => {
 	const pageIndex = useSelector(state => state.counter.pageIndex);
+	const stateNavigateFooter = useSelector(
+		state => state.counter.stateNavigateFooter
+	);
+	const inputText = useSelector(state => state.input.inputText);
 	const dispatch = useDispatch();
 	const arrayPages = ["Home", "Tasks"];
 	const constraintsRef = React.useRef(null);
 	const [stateClasContMotion, setStateClasContMotion] = React.useState(true);
 	const footerState = useSelector(state => state.counter.footerState);
 	const navigate = useNavigate();
+	const colorS = useSelector(state => state.input.colorS);
 	const linkToCreatePage = () => {
 		setStateClasContMotion(false);
-		navigate("/1step");
-		dispatch(changePageIndex(-6));
+		navigate(
+			stateNavigateFooter != 3 ? `/${stateNavigateFooter}step` : "/tasks"
+		);
+		inputText && colorS != "323232"
+			? dispatch(pushTask({ text: inputText, color: colorS }))
+			: null;
+		dispatch(setInput(""));
 	};
 	React.useEffect(() => {
 		dispatch(changeFooterState(true));
