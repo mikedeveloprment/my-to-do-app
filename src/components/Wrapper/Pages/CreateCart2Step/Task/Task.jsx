@@ -19,10 +19,17 @@ const Task = () => {
 		dispatch(changePageIndex(1));
 		dispatch(setNavigateFooter(3));
 	};
+	const colorS = useSelector(state => state.input.colorS);
+
 	return (
 		<article className={clas.cart} tabIndex="0">
 			<div className={clas.cartHeader}>Task</div>
-			<div className={clas.cartMain}>
+			<div
+				className={clas.cartMain}
+				style={{
+					background: `#${colorS}`,
+				}}
+			>
 				<textarea
 					onFocus={inputFocus}
 					className={clas.cartInput}
